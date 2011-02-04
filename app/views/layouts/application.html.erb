@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Michael Kelly</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<%= image_tag "header.png", :id => "layout_header" %>
+<div id="layout_container">
+
+<%= yield %>
+
+</div>
+
+</body>
+</html>
