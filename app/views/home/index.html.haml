@@ -1,0 +1,4 @@
+%h1 Recent Entries
+
+- @recent_posts.each do |post|
+    = render :partial => "posts/full", :locals => {:post => post}

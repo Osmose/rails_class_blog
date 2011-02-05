@@ -1,0 +1,48 @@
+/**
+ * Calendar that shows date of blog posts
+ */
+
+@mixin calendar-text($fontSize) {
+    position: absolute;
+    font: {
+        size: $fontSize;
+        weight: bold;
+    }
+}
+
+@mixin calendar-center {
+    left: 11px;
+    text-align: center;
+    width: 30px;
+}
+
+div.blog_date {
+    background: url('../images/calendar.png') no-repeat;
+    float: left;
+    height: 59px;
+    margin: {
+        right: 10px;
+    }
+    position: relative;
+    width: 52px;
+    
+    div.month {
+        @include calendar-text(10px);
+        color: $white;
+        left: 16px;
+        top: 0px;
+    }
+    
+    div.day {
+        @include calendar-text(16px);
+        @include calendar-center;
+        top: 23px;
+    }
+    
+    div.year {
+        @include calendar-text(10px);
+        @include calendar-center;
+        top: 39px;
+    }
+   
+}

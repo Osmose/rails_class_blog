@@ -1,0 +1,9 @@
+.blog_post
+    .blog_header
+        .blog_date
+            .month= post.created_at.strftime("%b").upcase
+            .day= post.created_at.strftime("%e")
+            .year= post.created_at.strftime("%Y")
+        %h2.post_title= post.title
+        .blog_author= post.name
+    .blog_content= post.content

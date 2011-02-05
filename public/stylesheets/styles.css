@@ -1,68 +1,149 @@
-body { 
-    background-color: #002B4D;
-    color: #1E202D;
-}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0b1 | 201101 
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* remember to define visible focus styles! 
+:focus {
+	outline: ?????;
+} */
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ * General site styles
+ */
+body {
+  background-color: #002b4d;
+  color: #1e202d; }
 
 body, p, ol, ul, td {
-    font-family: verdana, arial, helvetica, sans-serif;
-    font-size:   13px;
-    line-height: 18px;
-}
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
 
-pre {
-    background-color: #eee;
-    padding: 10px;
-    font-size: 11px;
-}
+a {
+  color: #1e202d;
+  font-weight: bold; }
+  a:visited {
+    color: #666; }
 
-a { 
-    color: #1E202D;
-    font-weight: bold;
-}
-a:visited {
-    color: #666;
-}
-
-div.field, div.actions {
-    margin-bottom: 10px;
-}
-
-#notice {
-    color: green;
-}
-
-.field_with_errors {
-    padding: 2px;
-    background-color: red;
-    display: table;
-}
-
-#error_explanation {
-    width: 450px;
-    border: 2px solid red;
-    padding: 7px;
-    padding-bottom: 0;
-    margin-bottom: 20px;
-    background-color: #f0f0f0;
-}
-
-#error_explanation h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff;
-}
-
-#error_explanation ul li {
-    font-size: 12px;
-    list-style: square;
-}
+h1, h2, h3 {
+  font-weight: bold;
+  margin-bottom: 6px;
+  margin-top: 6px; }
 
 h1, h2 {
-    border-bottom: 1px solid #1E202D;
-    padding-bottom: 10px;
-}
+  border-bottom: 1px solid #1e202d;
+  padding-bottom: 5px; }
+
+h1 {
+  font-size: 24px; }
+
+h2 {
+  font-size: 20px; }
+
+h3 {
+  font-size: 16px; }
+
+/**
+ * Main template layout
+ */
+img#layout_header {
+  display: block;
+  margin: 0 auto; }
+
+div#layout_container {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  background-color: #a7511e;
+  border: 2px solid #db913c;
+  margin: 0 auto;
+  padding: 12px;
+  width: 640px; }
+
+/**
+ * Calendar that shows date of blog posts
+ */
+div.blog_date {
+  background: url("../images/calendar.png") no-repeat;
+  float: left;
+  height: 59px;
+  margin-right: 10px;
+  position: relative;
+  width: 52px; }
+  div.blog_date div.month {
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    left: 16px;
+    top: 0px; }
+  div.blog_date div.day {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    left: 11px;
+    text-align: center;
+    width: 30px;
+    top: 23px; }
+  div.blog_date div.year {
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    left: 11px;
+    text-align: center;
+    width: 30px;
+    top: 39px; }
+
+/**
+ * Blog post styles
+ */
+h2.post_title {
+  margin-left: 62px; }

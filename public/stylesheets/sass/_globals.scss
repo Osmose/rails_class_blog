@@ -1,0 +1,14 @@
+// SASS specific global stuff
+
+// Color palette
+$white: #FFFFFF;
+$blue: #002B4D;
+$darkGray: #1E202D;
+$lightYellow: #DB913C;
+$darkYellow: #A7511E;
+
+// Rounded corners
+@mixin round-corner($radius) {
+    border-radius: $radius;
+    -moz-border-radius: $radius;
+}

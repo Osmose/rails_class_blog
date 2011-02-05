@@ -1,0 +1,17 @@
+/**
+ * Main template layout
+ */
+
+img#layout_header {
+    display: block;
+    margin: 0 auto;
+}
+
+div#layout_container {
+    @include round-corner(4px);
+    background-color: $darkYellow;
+    border: 2px solid $lightYellow;
+    margin: 0 auto;
+    padding: 12px;
+    width: 640px;
+}
