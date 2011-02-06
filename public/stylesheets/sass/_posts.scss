@@ -1,7 +1,18 @@
 /**
- * Blog post styles
+ * post post styles
  */
 
-h2.post_title {
+div.post_post {
+    clear: both;
+    margin-bottom: 40px;
+}
+
+div.post_author {
+    float: right;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+div.post_body {
     margin-left: 62px;
 }

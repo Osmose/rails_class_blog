@@ -76,8 +76,7 @@ a {
 
 h1, h2, h3 {
   font-weight: bold;
-  margin-bottom: 6px;
-  margin-top: 6px; }
+  margin-bottom: 6px; }
 
 h1, h2 {
   border-bottom: 1px solid #1e202d;
@@ -108,32 +107,35 @@ div#layout_container {
   padding: 12px;
   width: 640px; }
 
+h1.page_title {
+  margin-bottom: 20px; }
+
 /**
- * Calendar that shows date of blog posts
+ * Calendar that shows date of post posts
  */
-div.blog_date {
+div.post_date {
   background: url("../images/calendar.png") no-repeat;
   float: left;
   height: 59px;
   margin-right: 10px;
   position: relative;
   width: 52px; }
-  div.blog_date div.month {
+  div.post_date div.month {
     position: absolute;
     font-size: 10px;
     font-weight: bold;
     color: white;
     left: 16px;
     top: 0px; }
-  div.blog_date div.day {
+  div.post_date div.day {
     position: absolute;
     font-size: 16px;
     font-weight: bold;
     left: 11px;
     text-align: center;
     width: 30px;
-    top: 23px; }
-  div.blog_date div.year {
+    top: 21px; }
+  div.post_date div.year {
     position: absolute;
     font-size: 10px;
     font-weight: bold;
@@ -143,7 +145,16 @@ div.blog_date {
     top: 39px; }
 
 /**
- * Blog post styles
+ * post post styles
  */
-h2.post_title {
+div.post_post {
+  clear: both;
+  margin-bottom: 40px; }
+
+div.post_author {
+  float: right;
+  font-weight: bold;
+  line-height: 20px; }
+
+div.post_body {
   margin-left: 62px; }

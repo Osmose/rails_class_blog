@@ -1,5 +1,5 @@
 /**
- * Calendar that shows date of blog posts
+ * Calendar that shows date of post posts
  */
 
 @mixin calendar-text($fontSize) {
@@ -16,7 +16,7 @@
     width: 30px;
 }
 
-div.blog_date {
+div.post_date {
     background: url('../images/calendar.png') no-repeat;
     float: left;
     height: 59px;
@@ -36,7 +36,7 @@ div.blog_date {
     div.day {
         @include calendar-text(16px);
         @include calendar-center;
-        top: 23px;
+        top: 21px;
     }
     
     div.year {
