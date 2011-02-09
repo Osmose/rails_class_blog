@@ -7,6 +7,17 @@
         = javascript_include_tag "styles"
         = csrf_meta_tag
     %body
+        #login
+            - unless user_signed_in?
+                = form_tag new_user_session_path do
+                    = text_field_tag "user[email]"
+                    = password_field_tag "user[password]"
+                    %button Login
+            - else
+                = "Logged in as " + current_user.name
+                - if current_user.admin?
+                |
+                = link_to('Logout', destroy_user_session_path)
         = image_tag "header.png", :id => "layout_header"
         #layout_container
             = yield

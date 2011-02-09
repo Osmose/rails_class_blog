@@ -31,3 +31,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Bundle HAML
 gem 'haml'
+
+gem "devise"
+gem "ruby_parser"
+gem "hpricot"

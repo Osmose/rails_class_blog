@@ -56,6 +56,69 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: 'Arvo';
+  src: url("/fonts/arvo/Arvo-BoldItalic-webfont.eot");
+  src: local("?"), url("/fonts/arvo/Arvo-BoldItalic-webfont.woff") format("woff"), url("/fonts/arvo/Arvo-BoldItalic-webfont.ttf") format("truetype"), url("/fonts/arvo/Arvo-BoldItalic-webfont.svg#webfontX4pGz9fc") format("svg");
+  font-weight: 700;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Arvo';
+  src: url("/fonts/arvo/Arvo-Regular-webfont.eot");
+  src: local("?"), url("/fonts/arvo/Arvo-Regular-webfont.woff") format("woff"), url("/fonts/arvo/Arvo-Regular-webfont.ttf") format("truetype"), url("/fonts/arvo/Arvo-Regular-webfont.svg#webfontX4pGz9fc") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Arvo';
+  src: url("/fonts/arvo/Arvo-BoldItalic-webfont.eot");
+  src: local("?"), url("/fonts/arvo/Arvo-BoldItalic-webfont.woff") format("woff"), url("/fonts/arvo/Arvo-BoldItalic-webfont.ttf") format("truetype"), url("/fonts/arvo/Arvo-BoldItalic-webfont.svg#webfontX4pGz9fc") format("svg");
+  font-weight: 700;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Arvo';
+  src: url("/fonts/arvo/Arvo-Regular-webfont.eot");
+  src: local("?"), url("/fonts/arvo/Arvo-Regular-webfont.woff") format("woff"), url("/fonts/arvo/Arvo-Regular-webfont.ttf") format("truetype"), url("/fonts/arvo/Arvo-Regular-webfont.svg#webfontX4pGz9fc") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/fonts/ubuntu/Ubuntu-B-webfont.eot");
+  src: local("?"), url("/fonts/ubuntu/Ubuntu-B-webfont.woff") format("woff"), url("/fonts/ubuntu/Ubuntu-B-webfont.ttf") format("truetype"), url("/fonts/ubuntu/Ubuntu-B-webfont.svg#webfontX4pGz9fc") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/fonts/ubuntu/Ubuntu-BI-webfont.eot");
+  src: local("?"), url("/fonts/ubuntu/Ubuntu-BI-webfont.woff") format("woff"), url("/fonts/ubuntu/Ubuntu-BI-webfont.ttf") format("truetype"), url("/fonts/ubuntu/Ubuntu-BI-webfont.svg#webfontX4pGz9fc") format("svg");
+  font-weight: 700;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/fonts/ubuntu/Ubuntu-I-webfont.eot");
+  src: local("?"), url("/fonts/ubuntu/Ubuntu-I-webfont.woff") format("woff"), url("/fonts/ubuntu/Ubuntu-I-webfont.ttf") format("truetype"), url("/fonts/ubuntu/Ubuntu-I-webfont.svg#webfontX4pGz9fc") format("svg");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/fonts/ubuntu/Ubuntu-R-webfont.eot");
+  src: local("?"), url("/fonts/ubuntu/Ubuntu-R-webfont.woff") format("woff"), url("/fonts/ubuntu/Ubuntu-R-webfont.ttf") format("truetype"), url("/fonts/ubuntu/Ubuntu-R-webfont.svg#webfontX4pGz9fc") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url("/fonts/Inconsolata/Inconsolata-webfont.eot");
+  src: local("?"), url("/fonts/Inconsolata/Inconsolata-webfont.woff") format("woff"), url("/fonts/Inconsolata/Inconsolata-webfont.ttf") format("truetype"), url("/fonts/Inconsolata/Inconsolata-webfont.svg#webfontX4pGz9fc") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
 /**
  * General site styles
  */
@@ -64,9 +127,8 @@ body {
   color: #1e202d; }
 
 body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px; }
+  font-family: "Arvo", Rockwell, serif;
+  font-size: 1em; }
 
 a {
   color: #1e202d;
@@ -75,12 +137,9 @@ a {
     color: #666; }
 
 h1, h2, h3 {
+  font-family: "Arvo", Rockwell, serif;
   font-weight: bold;
   margin-bottom: 6px; }
-
-h1, h2 {
-  border-bottom: 1px solid #1e202d;
-  padding-bottom: 5px; }
 
 h1 {
   font-size: 24px; }
@@ -91,9 +150,22 @@ h2 {
 h3 {
   font-size: 16px; }
 
+input[type="text"], input[type="password"], textarea {
+  background-color: #d0d0d0;
+  border: 1px solid #a7a7a7; }
+
 /**
  * Main template layout
  */
+div#login {
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  background-color: #a7511e;
+  padding: 4px;
+  position: fixed;
+  right: 4px;
+  top: 4px; }
+
 img#layout_header {
   display: block;
   margin: 0 auto; }
@@ -111,6 +183,15 @@ h1.page_title {
   margin-bottom: 20px; }
 
 /**
+ * Styles for devise login forms
+ */
+form label {
+  font-weight: bold; }
+form p {
+  line-height: 20px;
+  margin-bottom: 8px; }
+
+/**
  * Calendar that shows date of post posts
  */
 div.post_date {
@@ -121,28 +202,33 @@ div.post_date {
   position: relative;
   width: 52px; }
   div.post_date div.month {
+    font-family: "Ubuntu", "Arial", "Helvetica", "Lucida Grande", "Verdana", "Gill Sans", sans-serif;
+    left: 11px;
+    text-align: center;
+    width: 30px;
     position: absolute;
     font-size: 10px;
     font-weight: bold;
     color: white;
-    left: 16px;
-    top: 0px; }
+    top: 5px; }
   div.post_date div.day {
-    position: absolute;
-    font-size: 16px;
-    font-weight: bold;
+    font-family: "Ubuntu", "Arial", "Helvetica", "Lucida Grande", "Verdana", "Gill Sans", sans-serif;
     left: 11px;
     text-align: center;
     width: 30px;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
     top: 21px; }
   div.post_date div.year {
+    font-family: "Ubuntu", "Arial", "Helvetica", "Lucida Grande", "Verdana", "Gill Sans", sans-serif;
+    left: 11px;
+    text-align: center;
+    width: 30px;
     position: absolute;
     font-size: 10px;
     font-weight: bold;
-    left: 11px;
-    text-align: center;
-    width: 30px;
-    top: 39px; }
+    top: 43px; }
 
 /**
  * post post styles
@@ -150,6 +236,9 @@ div.post_date {
 div.post_post {
   clear: both;
   margin-bottom: 40px; }
+  div.post_post h2 {
+    border-bottom: 1px solid #1e202d;
+    padding-bottom: 5px; }
 
 div.post_author {
   float: right;
@@ -158,3 +247,6 @@ div.post_author {
 
 div.post_body {
   margin-left: 62px; }
+
+div.post_content {
+  line-height: 22px; }

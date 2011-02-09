@@ -4,6 +4,8 @@
 $white: #FFFFFF;
 $blue: #002B4D;
 $darkGray: #1E202D;
+$midGray: #A7A7A7;
+$lightGray: #D0D0D0;
 $lightYellow: #DB913C;
 $darkYellow: #A7511E;
 
@@ -11,4 +13,17 @@ $darkYellow: #A7511E;
 @mixin round-corner($radius) {
     border-radius: $radius;
     -moz-border-radius: $radius;
+}
+
+// Fonts
+@mixin arvo {
+    font-family: "Arvo", Rockwell, serif;
+}
+
+@mixin ubuntu { 
+    font-family: "Ubuntu", "Arial", "Helvetica", "Lucida Grande", "Verdana", "Gill Sans", sans-serif;
+}
+
+@mixin inconsolata {
+    font-family: "Inconsolata", Menlo, Courier New, Courier, Mono, monospace;
 }

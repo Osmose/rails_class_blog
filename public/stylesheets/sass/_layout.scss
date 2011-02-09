@@ -2,6 +2,16 @@
  * Main template layout
  */
 
+div#login {
+    @include round-corner(2px);
+    
+    background-color: $darkYellow;
+    padding: 4px;
+    position: fixed;
+    right: 4px;
+    top: 4px;
+}
+
 img#layout_header {
     display: block;
     margin: 0 auto;

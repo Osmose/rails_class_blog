@@ -3,6 +3,8 @@
  */
 
 @mixin calendar-text($fontSize) {
+    @include ubuntu;
+    @include calendar-center;
     position: absolute;
     font: {
         size: $fontSize;
@@ -29,20 +31,17 @@ div.post_date {
     div.month {
         @include calendar-text(10px);
         color: $white;
-        left: 16px;
-        top: 0px;
+        top: 5px;
     }
     
     div.day {
-        @include calendar-text(16px);
-        @include calendar-center;
+        @include calendar-text(20px);
         top: 21px;
     }
     
     div.year {
         @include calendar-text(10px);
-        @include calendar-center;
-        top: 39px;
+        top: 43px;
     }
    
 }
