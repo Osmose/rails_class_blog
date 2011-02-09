@@ -1,12 +1,11 @@
 Blog::Application.routes.draw do
   devise_for :users
-
-  resources :posts do
-    resources :comments
-  end
+  resources :posts
 
   root :to => "home#index"
 
+  match "/admin" => "admin#index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
