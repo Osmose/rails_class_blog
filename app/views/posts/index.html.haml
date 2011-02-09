@@ -1,0 +1,23 @@
+%h1.page_title View Posts
+
+%table
+    %tr
+        %th Author
+        %th Title
+        %th Date
+        %th
+        %th
+    - @posts.each do |p|
+        %tr
+            %td
+                - unless p.user.nil?
+                    = p.user.name
+                - else
+                    {Deleted}
+            %td= link_to p.title, p
+            %td= p.created_at
+            %td= link_to "Edit", edit_post_path(p)
+            %td= link_to "Delete", p, :confirm => "Are you sure?", :method => :delete
+
+%br/
+= link_to "Create new Post", new_post_path

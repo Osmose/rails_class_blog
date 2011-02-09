@@ -1,5 +1,10 @@
 class PostsController < ApplicationController
-  before_filter :authenticate, :except => [:index, :show]
+    before_filter :authenticate_user!, :except => :show
+    before_filter :require_admin, :except => :show
+    
+    def require_admin
+        current_user.admin?
+    end
 
   # GET /posts
   # GET /posts.xml
@@ -43,6 +48,7 @@ class PostsController < ApplicationController
   # POST /posts.xml
   def create
     @post = Post.new(params[:post])
+    @post.user = current_user
 
     respond_to do |format|
       if @post.save

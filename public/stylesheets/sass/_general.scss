@@ -45,3 +45,22 @@ input[type="text"], input[type="password"], textarea {
     background-color: $lightGray;
     border: 1px solid $midGray;
 }
+
+table {
+    border: {
+        top: 1px solid $darkGray;
+        left: 1px solid $darkGray;
+    }
+    
+    th {
+        font-weight: bold;
+    }
+    
+    td, th {
+        border: {
+            bottom: 1px solid $darkGray;
+            right: 1px solid $darkGray;
+        }
+        padding: 4px;
+    }
+}

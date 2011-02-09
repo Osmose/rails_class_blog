@@ -154,6 +154,16 @@ input[type="text"], input[type="password"], textarea {
   background-color: #d0d0d0;
   border: 1px solid #a7a7a7; }
 
+table {
+  border-top: 1px solid #1e202d;
+  border-left: 1px solid #1e202d; }
+  table th {
+    font-weight: bold; }
+  table td, table th {
+    border-bottom: 1px solid #1e202d;
+    border-right: 1px solid #1e202d;
+    padding: 4px; }
+
 /**
  * Main template layout
  */
@@ -177,7 +187,7 @@ div#layout_container {
   border: 2px solid #db913c;
   margin: 0 auto;
   padding: 12px;
-  width: 720px; }
+  width: 640px; }
 
 h1.page_title {
   margin-bottom: 20px; }
