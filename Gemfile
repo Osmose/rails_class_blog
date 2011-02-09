@@ -35,3 +35,4 @@ gem 'haml'
 gem "devise"
 gem "ruby_parser"
 gem "hpricot"
+gem "disqus"

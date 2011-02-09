@@ -4,6 +4,7 @@
         .day= post.created_at.strftime("%e")
         .year= post.created_at.strftime("%Y")
     .post_body
-        .post_author= "posted by " + post.name
-        %h2.post_title= post.title
+        .post_author= "posted by " + post.author
+        %h2.post_title
+            = link_to post.title, post
         .post_content= post.content

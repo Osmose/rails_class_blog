@@ -9,11 +9,7 @@
         %th
     - @posts.each do |p|
         %tr
-            %td
-                - unless p.user.nil?
-                    = p.user.name
-                - else
-                    {Deleted}
+            %td= p.author
             %td= link_to p.title, p
             %td= p.created_at
             %td= link_to "Edit", edit_post_path(p)
