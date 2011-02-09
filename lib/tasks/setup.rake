@@ -17,4 +17,8 @@ namespace :blog do
     task :clear_users => :environment do
         User.delete_all()
     end
+    
+    task :clear_posts => :environment do
+        Post.delete_all()
+    end
 end
