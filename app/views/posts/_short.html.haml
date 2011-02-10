@@ -7,4 +7,6 @@
         .post_author= "posted by " + post.author
         %h2.post_title
             = link_to post.title, post
-        .post_content= post.content
+        .post_content
+            :markdown
+                #{post.content}
