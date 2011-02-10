@@ -3,11 +3,16 @@
 // Color palette
 $white: #FFFFFF;
 $blue: #002B4D;
+
 $darkGray: #1E202D;
 $midGray: #A7A7A7;
 $lightGray: #D0D0D0;
+
 $lightYellow: #DB913C;
 $darkYellow: #A7511E;
+
+$whiteRed: #FEF1EC;
+$red: #CD0A0A;
 
 // Rounded corners
 @mixin round-corner($radius) {

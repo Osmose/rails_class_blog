@@ -154,12 +154,12 @@ input[type="text"], input[type="password"], textarea {
   background-color: #d0d0d0;
   border: 1px solid #a7a7a7; }
 
-table {
+table.border {
   border-top: 1px solid #1e202d;
   border-left: 1px solid #1e202d; }
-  table th {
+  table.border th {
     font-weight: bold; }
-  table td, table th {
+  table.border td, table.border th {
     border-bottom: 1px solid #1e202d;
     border-right: 1px solid #1e202d;
     padding: 4px; }
@@ -191,6 +191,24 @@ div#layout_container {
 
 h1.page_title {
   margin-bottom: 20px; }
+
+div#error {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  background: #fef1ec;
+  border: 1px solid #cd0a0a;
+  color: #cd0a0a;
+  margin: 8px;
+  padding: 8px; }
+
+div#notice {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  background: #d0d0d0;
+  border: 1px solid #1e202d;
+  color: #1e202d;
+  margin: 8px;
+  padding: 8px; }
 
 /**
  * Styles for devise login forms

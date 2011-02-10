@@ -39,6 +39,8 @@ module Blog
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
     
-    Disqus::defaults[:account] = "Osmose1000"
+    Disqus::defaults[:account] = "mkelly01"
+    Disqus::defaults[:container_id] = "disqus_thread"
+    Disqus::defaults[:show_powered_by] = false 
   end
 end

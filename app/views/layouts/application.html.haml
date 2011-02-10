@@ -20,6 +20,17 @@
                     = link_to "Admin", admin_path
                 |
                 = link_to('Logout', destroy_user_session_path)
-        = image_tag "header.png", :id => "layout_header"
+        = link_to image_tag("header.png", :id => "layout_header"), root_url
         #layout_container
+            - if flash[:error]
+                - if flash[:error].is_a?(Array)
+                    #error
+                        Error:
+                        %ul
+                            - flash[:error].each do |e|
+                                %li= e
+                - else
+                    #error= flash[:error]
+            - if flash[:notice]
+                #notice= flash[:notice]
             = yield

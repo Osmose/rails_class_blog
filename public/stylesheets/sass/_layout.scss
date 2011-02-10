@@ -29,3 +29,21 @@ div#layout_container {
 h1.page_title {
     margin-bottom: 20px;
 }
+
+div#error {
+    @include round-corner(4px);
+    background: $whiteRed;
+    border: 1px solid $red;
+    color: $red;
+    margin: 8px;
+    padding: 8px;
+}
+
+div#notice {
+    @include round-corner(4px);
+    background: $lightGray;
+    border: 1px solid $darkGray;
+    color: $darkGray;
+    margin: 8px;
+    padding: 8px;
+}

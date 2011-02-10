@@ -46,7 +46,7 @@ input[type="text"], input[type="password"], textarea {
     border: 1px solid $midGray;
 }
 
-table {
+table.border {
     border: {
         top: 1px solid $darkGray;
         left: 1px solid $darkGray;
