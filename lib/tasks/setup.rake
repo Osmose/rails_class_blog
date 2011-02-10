@@ -1,9 +1,5 @@
 namespace :blog do
     task :setup_admin => :environment do
-        User.delete_all(
-            :admin => true
-        )
-        
         user = User.create! do |u|
             u.name = ENV["a_name"]
             u.email = ENV["a_email"]
