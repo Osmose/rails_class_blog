@@ -2,3 +2,5 @@
 
 - @recent_posts.each do |post|
     = render :partial => "posts/short", :locals => {:post => post}
+
+= will_paginate @recent_posts

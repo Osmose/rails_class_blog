@@ -10,4 +10,4 @@
             :markdown
                 #{@post.content}
                 
-!= disqus_thread :identifier => (ENV['RAILS_ENV'] + @post.id.to_s)
+!= disqus_thread_id(ENV['RAILS_ENV'] + @post.id.to_s)

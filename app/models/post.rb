@@ -4,6 +4,10 @@ class Post < ActiveRecord::Base
     
     belongs_to :user
     
+    # Pagination
+    cattr_reader :per_page
+    @@per_page = 5
+    
     def author
         unless self.user.nil?
             return self.user.name

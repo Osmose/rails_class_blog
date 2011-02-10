@@ -11,4 +11,10 @@ module ApplicationHelper
             return link_to text, post
         end
     end
+    
+    def disqus_thread_id(id)
+        s = '<script type="text/javascript">var disqus_identifier = "' + id + '";</script>'
+        
+        return s.html_safe + disqus_thread.html_safe
+    end
 end
