@@ -35,5 +35,5 @@ gem 'haml'
 gem "devise"
 gem "ruby_parser"
 gem "hpricot"
-gem "disqus"
+gem "disqus", :git => "git://github.com/Osmose/disqus.git"
 gem "BlueCloth"

@@ -20,11 +20,22 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.xml
   def show
-    @post = Post.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @post }
+    begin
+        @post = Post.find(params[:id])
+    rescue
+        @post = Post.first(
+            :conditions => 'permalink = "' + params[:id] + '"'
+        )
+    end
+    
+    if @post
+        respond_to do |format|
+          format.html # show.html.erb
+          format.xml  { render :xml => @post }
+        end
+    else
+        flash[:error] = "Post not found"
+        redirect_to(root_url)
     end
   end
 
@@ -49,6 +60,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(params[:post])
     @post.user = current_user
+    @post.permalink = permalink(@post.title)
 
     respond_to do |format|
       if @post.save

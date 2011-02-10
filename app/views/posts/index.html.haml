@@ -10,7 +10,7 @@
     - @posts.each do |p|
         %tr
             %td= p.author
-            %td= link_to p.title, p
+            %td= link_to_post p.title, p
             %td= p.created_at
             %td= link_to "Edit", edit_post_path(p)
             %td= link_to "Delete", p, :confirm => "Are you sure?", :method => :delete

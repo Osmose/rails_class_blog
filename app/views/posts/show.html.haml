@@ -4,10 +4,10 @@
         .day= @post.created_at.strftime("%e")
         .year= @post.created_at.strftime("%Y")
     .post_body
-        .post_author= "posted by " + @post.author
+        .post_author= "by " + @post.author
         %h1.post_title= @post.title
         .post_content
             :markdown
                 #{@post.content}
-
-!= disqus_thread
+                
+!= disqus_thread :identifier => (ENV['RAILS_ENV'] + @post.id.to_s)

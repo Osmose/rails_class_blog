@@ -4,9 +4,10 @@
         .day= post.created_at.strftime("%e")
         .year= post.created_at.strftime("%Y")
     .post_body
-        .post_author= "posted by " + post.author
+        .post_author= "by " + post.author
         %h2.post_title
-            = link_to post.title, post
+            = link_to_post post.title, post
         .post_content
             :markdown
-                #{post.content}
+                #{post.content.split(/\r?\n/).first}
+        .read_more= link_to_post "Read more", post

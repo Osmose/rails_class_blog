@@ -6,6 +6,8 @@ Blog::Application.routes.draw do
 
   match "/admin" => "admin#index"
   
+  match "/:id" => "posts#show"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
