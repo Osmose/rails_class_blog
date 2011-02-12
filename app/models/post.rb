@@ -18,8 +18,6 @@ class Post < ActiveRecord::Base
     
     # Statics
     def self.find_by_permalink(permalink)
-        Post.first(
-            :permalink => permalink
-        )
+        Post.where(:permalink => permalink).first
     end
 end
