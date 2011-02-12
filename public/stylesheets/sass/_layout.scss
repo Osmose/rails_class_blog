@@ -3,13 +3,15 @@
  */
 
 div#login {
-    @include round-corner(2px);
+    @include round-corner(4px);
+    @include shadow(0, 0, 1px, $lightYellow);
     
-    background-color: $darkYellow;
+    background-color: $midYellow;
+    border: 1px solid $lightYellow;
     padding: 4px;
     position: fixed;
-    right: 4px;
-    top: 4px;
+    right: 6px;
+    top: 6px;
 }
 
 img#layout_header {

@@ -154,6 +154,9 @@ h2 {
 h3 {
   font-size: 16px; }
 
+pre {
+  font-family: "Inconsolata", Menlo, Courier New, Courier, Mono, monospace; }
+
 input[type="text"], input[type="password"], textarea {
   background-color: #d0d0d0;
   border: 1px solid #a7a7a7; }
@@ -172,13 +175,17 @@ table.border {
  * Main template layout
  */
 div#login {
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  background-color: #a7511e;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -moz-box-shadow: 0 0 1px #f0b650;
+  -webkit-box-shadow: 0 0 1px #f0b650;
+  box-shadow: 0 0 1px #f0b650;
+  background-color: #db913c;
+  border: 1px solid #f0b650;
   padding: 4px;
   position: fixed;
-  right: 4px;
-  top: 4px; }
+  right: 6px;
+  top: 6px; }
 
 img#layout_header {
   display: block;
