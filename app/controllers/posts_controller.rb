@@ -23,9 +23,7 @@ class PostsController < ApplicationController
     begin
         @post = Post.find(params[:id])
     rescue
-        @post = Post.first(
-            :conditions => 'permalink = "' + params[:id] + '"'
-        )
+        @post = Post.find_by_permalink(params[:id])
     end
     
     if @post

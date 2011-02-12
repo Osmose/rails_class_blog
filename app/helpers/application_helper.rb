@@ -5,7 +5,7 @@ module ApplicationHelper
     end
     
     def link_to_post(text, post)
-        unless post.permalink.nil?
+        if not post.permalink.nil?
             return "<a href=\"/#{post.permalink}\">#{text}</a>".html_safe
         else
             return link_to text, post

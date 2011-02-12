@@ -9,10 +9,17 @@ class Post < ActiveRecord::Base
     @@per_page = 5
     
     def author
-        unless self.user.nil?
-            return self.user.name
+        if not self.user.nil?
+            self.user.name
         else
-            return "Anonymous"
+            "Anonymous"
         end
+    end
+    
+    # Statics
+    def self.find_by_permalink(permalink)
+        Post.first(
+            :permalink => permalink
+        )
     end
 end
