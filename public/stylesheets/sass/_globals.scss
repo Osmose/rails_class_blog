@@ -8,7 +8,8 @@ $darkGray: #1E202D;
 $midGray: #A7A7A7;
 $lightGray: #D0D0D0;
 
-$lightYellow: #DB913C;
+$lightYellow: #F0B650;
+$midYellow: #DB913C;
 $darkYellow: #A7511E;
 
 $whiteRed: #FEF1EC;
@@ -18,6 +19,18 @@ $red: #CD0A0A;
 @mixin round-corner($radius) {
     border-radius: $radius;
     -moz-border-radius: $radius;
+}
+
+@mixin shadow($hoffset, $voffset, $blur, $color) {
+    -moz-box-shadow: $hoffset $voffset $blur $color;
+    -webkit-box-shadow: $hoffset $voffset $blur $color;
+    box-shadow: $hoffset $voffset $blur $color;
+}
+
+@mixin shadow-inset($hoffset, $voffset, $blur, $color) {
+    -moz-box-shadow:inset $hoffset $voffset $blur $color;
+    -webkit-box-shadow:inset $hoffset $voffset $blur $color;
+    box-shadow:inset $hoffset $voffset $blur $color;
 }
 
 // Fonts
